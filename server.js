@@ -29,6 +29,14 @@ module.exports = async (req, res) => {
       text: JSON.stringify(formData, null, 2), // Convert the data to a JSON string
     };
 
+
+    const allowedOrigins = process.env.ALLOWED_ORIGINS.split(",");
+    const origin = req.headers.origin;
+
+    if (allowedOrigins.includes(origin)) {
+      res.setHeader("Access-Control-Allow-Origin", origin);
+    }
+
     // Send the email
     await transporter.sendMail(mailOptions);
 
