@@ -11,7 +11,7 @@ export const Confirm = () => {
   const submitData = async (data) => {
     try {
       // Send the form data to your backend server
-      await axios.post("https://multistep-form-gamma-five.vercel.app/send-email", data);
+      await axios.post("/send-email", data);
       console.log("Email sent successfully");
       // Handle success or redirect to a success page
     } catch (error) {
