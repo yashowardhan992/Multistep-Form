@@ -1,4 +1,3 @@
-// Remove the express app setup and import statements for express, bodyParser, and cors
 const nodemailer = require("nodemailer");
 
 module.exports = async (req, res) => {
@@ -33,9 +32,11 @@ module.exports = async (req, res) => {
     // Send the email
     await transporter.sendMail(mailOptions);
 
-    res.status(200).json({ message: "Email sent successfully" });
+    // Respond with a JSON object containing a 'message' property
+    return res.status(200).json({ message: "Email sent successfully" });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "Email could not be sent" });
+    // Respond with a JSON object containing an 'error' property
+    return res.status(500).json({ error: "Email could not be sent" });
   }
 };
