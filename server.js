@@ -1,17 +1,7 @@
-require("dotenv").config();
-const express = require("express");
+// Remove the express app setup and import statements for express, bodyParser, and cors
 const nodemailer = require("nodemailer");
-const bodyParser = require("body-parser");
 
-const cors = require("cors");
-const app = express();
-const port = 3001; // You can choose any port
-
-app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
-app.post("/send-email", async (req, res) => {
+module.exports = async (req, res) => {
   try {
     const formData = req.body;
 
@@ -48,8 +38,4 @@ app.post("/send-email", async (req, res) => {
     console.error(error);
     res.status(500).json({ error: "Email could not be sent" });
   }
-});
-
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+};
