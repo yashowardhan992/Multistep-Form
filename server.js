@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'frontend')));
 app.use(express.json());
 
 // Define allowed origins
-const allowedOrigins = process.env.ALLOWED_ORIGINS.split(',');
+const allowedOrigins = ['https://multistep-form-gamma-five.vercel.app']; // Add your allowed origins here
 
 // CORS middleware to allow requests from allowed origins
 app.use((req, res, next) => {
@@ -24,7 +24,6 @@ app.use((req, res, next) => {
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   next();
 });
-
 // Define an API endpoint for sending emails
 app.post('/send-email', async (req, res) => {
   try {
