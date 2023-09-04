@@ -68,3 +68,62 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+# SOP Generator
+
+This repository contains the source code for an SOP (Standard Operating Procedure) generator application. This document provides an overview of the technologies used in building the application and explains the logic behind the process of user form submission and email delivery.
+
+## Technologies Used
+
+### Frontend
+
+- **React**: The frontend of the application is built using React, a popular JavaScript library for building user interfaces.
+- **@emotion/react** and **@emotion/styled**: These libraries are used for styling components with Emotion, a performant and flexible CSS-in-JS library.
+- **@fontsource/roboto**: Provides the Roboto font for the application's typography.
+- **@mui/material** and **@mui/styled-engine-sc**: Material-UI components and styles are used for building a cohesive and responsive UI.
+- **@hookform/devtools** and **react-hook-form**: These libraries help manage form state and validation in React applications.
+- **react-icons**: Provides a collection of icons for use in the user interface.
+- **react-router-dom**: Enables client-side routing and navigation within the application.
+
+### Backend
+
+- **Node.js**: The backend of the application is built with Node.js, a JavaScript runtime.
+- **Express**: Express is used as the web application framework to handle routing and middleware.
+- **cors**: Middleware for handling Cross-Origin Resource Sharing (CORS).
+- **dotenv**: Allows the use of environment variables for configuration.
+- **helmet**: Helps secure the application by setting HTTP headers.
+- **body-parser**: Middleware for parsing HTTP request bodies.
+- **axios**: A promise-based HTTP client for making API requests.
+- **nodemailer**: Used for sending emails to users.
+- **little-state-machine**: A library for managing state in React applications.
+
+### Build and Styling
+
+- **styled-components**: Used for styled-components and theming.
+- **tailwindcss**: A utility-first CSS framework for rapidly building custom designs.
+- **postcss-cli** and **autoprefixer**: Used for post-processing CSS to add vendor prefixes and other enhancements.
+- **web-vitals**: Helps measure and track web performance metrics.
+
+## Logic: User Form Submission and Email Delivery
+
+1. **User Fills the Form**: The application presents a user-friendly form for users to enter SOP details such as title, content, and recipient email address.
+
+2. **Form Data Validation**: The `react-hook-form` library is used for form state management and validation. It ensures that the user's input data is valid before submission.
+
+3. **Form Submission**: When the user submits the form, the form data is sent as a POST request to the server using the `axios` library.
+
+4. **Server Handling**: The Node.js server, powered by Express, receives the form data. It may perform additional validation and processing on the server-side if needed.
+
+5. **Email Delivery**: Nodemailer is used to send an email to the recipient email address provided in the form. It includes the SOP title and content as the email body.
+
+6. **Response to User**: The user receives a response on the frontend indicating whether the form submission was successful or if there were any errors during the process.
+
+7. **Error Handling**: Error handling is implemented both on the client and server sides to provide a robust and user-friendly experience. If there are any issues, appropriate error messages are displayed to the user.
+
+This logic ensures that users can easily create SOPs by filling out a form, and the generated SOP is delivered to their specified email address.
+
+---
+
+Feel free to add more specific details, instructions, or documentation as needed for your project.
