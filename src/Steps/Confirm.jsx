@@ -10,14 +10,18 @@ export const Confirm = () => {
 
   const submitData = async (data) => {
     try {
-      // Send the form data to your backend server
-      await axios.post("/send-email", data);
-      console.log("Email sent successfully");
-      // Handle success or redirect to a success page
-    } catch (error) {
-      console.error("Email could not be sent:", error);
-      // Handle the error or display an error message to the user
-    }
+    // Send the form data to your backend server
+    await axios({
+      method: "POST",
+      url: "/send-email",
+      data,
+    });
+    console.log("Email sent successfully");
+    // Handle success or redirect to a success page
+  } catch (error) {
+    console.error("Email could not be sent:", error);
+    // Handle the error or display an error message to the user
+  }
     console.info(data);
     // Submit data to the server
   };
