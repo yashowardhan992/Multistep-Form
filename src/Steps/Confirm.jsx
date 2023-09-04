@@ -9,10 +9,10 @@ export const Confirm = () => {
   const { handleSubmit } = useForm({ defaultValues: state });
 
   const submitData = async (data) => {
-    try {
+  try {
     // Send the form data to your backend server
     await axios({
-      method: "POST",
+      method: "GET",
       url: "/send-email",
       data,
     });
