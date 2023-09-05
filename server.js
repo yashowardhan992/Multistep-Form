@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'frontend')));
 app.use(express.json());
 
 // Define allowed origins
-const allowedOrigins = ['https://multistep-form-gamma-five.vercel.app']; // Add your allowed origins here
+const allowedOrigins = ['https://multistep-form-gamma-five.vercel.app/confirm']; // Add your allowed origins here
 
 // CORS middleware to allow requests from allowed origins
 app.use((req, res, next) => {
