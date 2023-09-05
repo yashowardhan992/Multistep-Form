@@ -11,8 +11,8 @@ export const Confirm = () => {
   const submitData = async (data) => {
   try {
     // Send the form data to your backend server
-    await axios({
-      method: "GET",
+   await axios({
+      method: "POST",
       url: "/send-email",
       data,
     });
