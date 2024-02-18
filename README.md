@@ -124,10 +124,6 @@ This repository contains the source code for an SOP (Standard Operating Procedur
 
 This logic ensures that users can easily create SOPs by filling out a form, and the generated SOP is delivered to their specified email address.
 
-### Status 200
-![Status 200](https://github.com/yashowardhan992/Multistep-Form/assets/52581482/f5445155-6395-48e7-8e35-0283fa9e41ee)
 
-### Form Mail 
-![form mail](https://github.com/yashowardhan992/Multistep-Form/assets/52581482/e424f460-f097-4fd2-8ee2-ba0c0e851d5a)
 
 
